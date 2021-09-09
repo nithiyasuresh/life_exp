@@ -158,7 +158,7 @@ d3.csv('https://raw.githubusercontent.com/nithiyasuresh/LifeExpectancy_Project/n
         };
 
         // Create the plot:
-        Plotly.plot('plot', {
+        Plotly.plot('bubble_plot', {
             data: traces,
             layout: layout,
             config: { showSendToCloud: true },
