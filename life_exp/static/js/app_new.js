@@ -156,9 +156,18 @@ d3.csv('https://raw.githubusercontent.com/nithiyasuresh/LifeExpectancy_Project/n
                 steps: sliderSteps
             }]
         };
+       
+        // Create the plot:
+       Plotly.plot('bubble_plot_continent', {
+        data: traces,
+        layout: layout,
+        config: { showSendToCloud: true },
+        frames: frames,
+    });
+
 
         // Create the plot:
-        Plotly.plot('bubble_plot', {
+        Plotly.plot('bubble_plot_country', {
             data: traces,
             layout: layout,
             config: { showSendToCloud: true },
