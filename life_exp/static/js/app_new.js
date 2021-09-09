@@ -175,21 +175,21 @@ d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/d
 
 // 3rd visualisation - world map
 
-d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2010_alcohol_consumption_by_country.csv').then (function(rows) {
+d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life_2015.csv').then (function(rows) {
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
 
-    var data = [{
+    var data_map = [{
         type: 'choropleth',
         locationmode: 'country names',
-        locations: unpack(rows, 'location'),
-        z: unpack(rows, 'alcohol'),
-        text: unpack(rows, 'location'),
+        locations: unpack(rows, 'Country'),
+        z: unpack(rows, 'Life_Expectancy'),
+        text: unpack(rows, 'Country'),
         autocolorscale: true
     }];
 
-    var layout = {
+    var layout_map = {
       title: 'Life Expectancy for 2015 across the world',
       geo: {
           projection: {
@@ -198,6 +198,6 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2010_alcohol_co
       }
     };
 
-    Plotly.newPlot("choropleth", data, layout, {showLink: false});
+    Plotly.newPlot("choropleth", data_map, layout_map, {showLink: false});
 
 });
