@@ -175,7 +175,7 @@ d3.csv('https://raw.githubusercontent.com/nithiyasuresh/LifeExpectancy_Project/n
 
 // 3rd visualisation - world map
 
-d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2010_alcohol_consumption_by_country.csv', function(err, rows){
+d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2010_alcohol_consumption_by_country.csv').then (function(rows) {
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
