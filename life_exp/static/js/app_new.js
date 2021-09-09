@@ -1,6 +1,6 @@
 // gapminder code from plotly example - https://plotly.com/javascript/gapminder-example/
 
-d3.csv('https://raw.githubusercontent.com/nithiyasuresh/LifeExpectancy_Project/nithiyaBranch/pet_pals/data/Life.csv').then(function (data) {
+d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life.csv').then(function (data) {
     console.log(data);
     // Create a lookup table to sort and regroup the columns of data,
     // first by Year, then by region:
@@ -190,7 +190,7 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2010_alcohol_co
     }];
 
     var layout = {
-      title: 'Pure alcohol consumption<br>among adults (age 15+) in 2010',
+      title: 'Life Expectancy for 2015 across the world',
       geo: {
           projection: {
               type: 'robinson'
