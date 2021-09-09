@@ -1,0 +1,1 @@
+FLASK_APP=life_exp/app.py flask run
