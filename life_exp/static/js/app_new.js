@@ -29,8 +29,8 @@ d3.csv('https://raw.githubusercontent.com/nithiyasuresh/LifeExpectancy_Project/n
         for (var i = 0; i < data.length; i++) {
             var datum = data[i];
             var trace = getData(datum.Year, datum.region);
-            trace.text.push(datum.country);
-            trace.id.push(datum.country);
+            trace.text.push(datum.Country);
+            trace.id.push(datum.Country);
             trace.x.push(datum.Life_Expectancy);
             trace.y.push(datum.GDP);
             trace.marker.size.push(datum.Population);
