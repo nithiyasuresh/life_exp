@@ -40,7 +40,6 @@ def get_db():
 #     cursor.execute(statement, [country])
 #     return cursor.fetchall()
 
-
 def get_all():
     db = get_db()
     cursor = db.cursor()
@@ -58,6 +57,12 @@ def home():
 def get_all_countries():
     countries = get_all()
     return jsonify(countries)
+
+
+if __name__ == "__main__":
+    app.run()
+
+
 
 
 
@@ -101,7 +106,3 @@ def get_all_countries():
 #     }]
 
     # return jsonify(pet_data)
-
-
-if __name__ == "__main__":
-    app.run()
