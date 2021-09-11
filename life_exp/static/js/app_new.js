@@ -179,7 +179,11 @@ d3.json(url).then(function (data) {
 
 // 3rd visualisation - world map
 
-d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life_2015.csv').then (function(rows) {
+const url = "/api/countries";
+d3.json(url).then(function (rows) {
+    console.log(rows);
+
+// d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life_2015.csv').then (function(rows) {
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
