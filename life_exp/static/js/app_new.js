@@ -1,6 +1,6 @@
 // gapminder code from plotly example - https://plotly.com/javascript/gapminder-example/
 
-const url = "/api/life";
+const url = "/api/countries";
 d3.json(url).then(function (data) {
     console.log(data);
 
@@ -179,29 +179,29 @@ d3.json(url).then(function (data) {
 
 // 3rd visualisation - world map
 
-// d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life_2015.csv').then (function(rows) {
-//       function unpack(rows, key) {
-//           return rows.map(function(row) { return row[key]; });
-//       }
+d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life_2015.csv').then (function(rows) {
+      function unpack(rows, key) {
+          return rows.map(function(row) { return row[key]; });
+      }
 
-//     var data_map = [{
-//         type: 'choropleth',
-//         locationmode: 'country names',
-//         locations: unpack(rows, 'Country'),
-//         z: unpack(rows, 'Life_Expectancy'),
-//         text: unpack(rows, 'Country'),
-//         autocolorscale: true
-//     }];
+    var data_map = [{
+        type: 'choropleth',
+        locationmode: 'country names',
+        locations: unpack(rows, 'Country'),
+        z: unpack(rows, 'Life_Expectancy'),
+        text: unpack(rows, 'Country'),
+        autocolorscale: true
+    }];
 
-//     var layout_map = {
-//       title: 'Life Expectancy for 2015 across the world',
-//       geo: {
-//           projection: {
-//               type: 'robinson'
-//           }
-//       }
-//     };
+    var layout_map = {
+      title: 'Life Expectancy for 2015 across the world',
+      geo: {
+          projection: {
+              type: 'robinson'
+          }
+      }
+    };
 
-//     Plotly.newPlot("choropleth", data_map, layout_map, {showLink: false});
+    Plotly.newPlot("choropleth", data_map, layout_map, {showLink: false});
 
-// });
+});

@@ -62,7 +62,7 @@ def home():
     return render_template("index.html")
 
 # define App routes to call GET Methods
-@app.route('/countries', methods=["GET"])
+@app.route('/api/countries', methods=["GET"])
 def get_all_countries():
     countries = get_all()
     return jsonify(countries)
