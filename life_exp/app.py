@@ -36,7 +36,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 from .models import Life
-from .models import Life_2015
+# from .models import Life_2015
 
 
 #define database GET Requests
@@ -44,10 +44,10 @@ def get_db():
     conn = sqlite3.connect(Life)
     return conn
 
-#define database GET Requests
-def get_db():
-    conn = sqlite3.connect(Life_2015)
-    return conn
+# #define database GET Requests
+# def get_db():
+#     conn = sqlite3.connect(Life_2015)
+#     return conn
 
 # def get_by_country(country):
 #     db = get_db()
@@ -63,12 +63,12 @@ def get_all():
     cursor.execute(query)
     return cursor.fetchall()
 
-def get_2015():
-    db = get_db()
-    cursor = db.cursor()
-    query = "SELECT * FROM LIFE_2015"
-    cursor.execute(query)
-    return cursor.fetchall()
+# def get_2015():
+#     db = get_db()
+#     cursor = db.cursor()
+#     query = "SELECT * FROM LIFE_2015"
+#     cursor.execute(query)
+#     return cursor.fetchall()
 
 # create route that renders index.html template
 @app.route("/")
@@ -76,16 +76,16 @@ def home():
     return render_template("index.html")
 
 # define App routes to call GET Methods
-@app.route('/api/countries', methods=["GET"])
-def get_all_countries():
-    countries = get_all()
-    return jsonify(countries)
+# @app.route('/api/countries', methods=["GET"])
+# def get_all_countries():
+#     countries = get_all()
+#     return jsonify(countries)
 
-# define app routes for 2015 data
-@app.route('/api/life_2015', methods=["GET"])
-def get_life_2015():
-    life2015 = get_2015()
-    return jsonify(life2015)
+# # define app routes for 2015 data
+# @app.route('/api/life_2015', methods=["GET"])
+# def get_life_2015():
+#     life2015 = get_2015()
+#     return jsonify(life2015)
 
 
 
