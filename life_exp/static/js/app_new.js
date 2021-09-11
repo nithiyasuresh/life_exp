@@ -1,11 +1,11 @@
 // gapminder code from plotly example - https://plotly.com/javascript/gapminder-example/
 
-const url = "/api/countries";
-d3.json(url).then(function (data) {
-    console.log(data);
-
-// d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life.csv').then(function (data) {
+// const url = "/api/countries";
+// d3.json(url).then(function (data) {
 //     console.log(data);
+
+d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life.csv').then(function (data) {
+    console.log(data);
     // Create a lookup table to sort and regroup the columns of data,
     // first by Year, then by region:
     var lookup = {};
@@ -179,11 +179,11 @@ d3.json(url).then(function (data) {
 
 // 3rd visualisation - world map
 
-const url = "/api/countries";
-d3.json(url).then(function (rows) {
-    console.log(rows);
+// const url = "/api/countries";
+// d3.json(url).then(function (rows) {
+//     console.log(rows);
 
-// d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life_2015.csv').then (function(rows) {
+d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life_2015.csv').then (function(rows) {
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
