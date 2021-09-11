@@ -73,7 +73,7 @@ def home():
 #         }
 #     }]
 
-    return jsonify(pet_data)
+    # return jsonify(pet_data)
 
 
 if __name__ == "__main__":
