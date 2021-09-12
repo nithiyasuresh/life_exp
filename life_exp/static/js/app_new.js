@@ -3,7 +3,7 @@
 // request.headers.append('Access-Control-Allow-Credentials', 'true');
 
 const url = "/api/countries";
-d3.json(url).then(function(data) {
+d3.json(url).then(function (data) {
 
 // d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life.csv').then(function (data) {
     console.log(data);

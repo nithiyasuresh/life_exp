@@ -30,7 +30,7 @@ def home():
 
 @app.route("/api/countries")
 def life():
-    life_data = db.session.query(Life.Country, Life.Year, Life.Status, Life.Life_Expectancy,Life.Adult_Mortality, Life.Infant_Deaths, Life.Alcohol, Life.Percentage_Expenditure, Life.Hepatitis_B, Life.Measles, Life.BMI, Life.underfive_deaths, Life.Polio, Life.Total_expenditure, Life.Diphtheria, Life.Hiv_AIDS, Life.GDP, Life.Population, Life.thinness_1To19years, Life.thinness_5To9years, Life.Income_composition_of_resources, Life.Schooling, Life.region, Life.sub_region).all()
+    life_data = db.session.query(Life.id, Life.Country, Life.Year, Life.Status, Life.Life_Expectancy,Life.Adult_Mortality, Life.Infant_Deaths, Life.Alcohol, Life.Percentage_Expenditure, Life.Hepatitis_B, Life.Measles, Life.BMI, Life.underfive_deaths, Life.Polio, Life.Total_expenditure, Life.Diphtheria, Life.Hiv_AIDS, Life.GDP, Life.Population, Life.thinness_1To19years, Life.thinness_5To9years, Life.Income_composition_of_resources, Life.Schooling, Life.region, Life.sub_region).all()
     return jsonify(life_data)
 
 
