@@ -2,10 +2,10 @@
 // request.headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5000/');
 // request.headers.append('Access-Control-Allow-Credentials', 'true');
 
-const url = "/api/countries";
-d3.json(url).then(function (data) {
+// const url = "/api/countries";
+// d3.json(url).then(function (data) {
 
-// d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life.csv').then(function (data) {
+d3.csv('https://raw.githubusercontent.com/nithiyasuresh/life_exp/main/life_exp/data/Life.csv').then(function (data) {
     console.log(data);
     // d3.json("http://127.0.0.1:5000/");
     // Create a lookup table to sort and regroup the columns of data,
